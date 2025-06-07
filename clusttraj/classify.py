@@ -58,14 +58,14 @@ def classify_structures_silhouette(
             t_opt = t
             labels_opt = hcl_labels
 
-    Logger.logger.info(f"Highest silhouette score: {ss_opt}\n")
+    Logger.logger.info(f"Highest silhouette score: {ss_opt:.6f}\n")
 
     if t_opt.size > 1:
-        t_opt_str = ", ".join([str(t) for t in t_opt])
+        t_opt_str = ", ".join([f"{t:.3f}" for t in t_opt])
         Logger.logger.info(
             f"The following RMSD threshold values yielded the same optimial silhouette score: {t_opt_str}\n"
         )
-        Logger.logger.info(f"The smallest RMSD of {t_opt[0]} has been adopted\n")
+        Logger.logger.info(f"The smallest RMSD of {t_opt[0]:.6f} has been adopted\n")
         clusters = labels_opt[0]
     else:
         Logger.logger.info(f"Optimal RMSD threshold value: {t_opt}\n")

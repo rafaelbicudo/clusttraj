@@ -20,7 +20,7 @@ if importlib.util.find_spec("qmllib"):
 else:
     has_qml = False
 
-header_string = """
+header_string = r"""
         __           __  __               _ 
   _____/ /_  _______/ /_/ /__________ _  (_)
  / ___/ / / / / ___/ __/ __/ ___/ __ `/ / / 
@@ -30,7 +30,7 @@ header_string = """
 
 A solvent-informed tool for clustering trajectories.
 
-Rafael B. Ribeiro and Henrique M. Cezar
+Rafael Bicudo Ribeiro and Henrique Musseli Cezar
 
 If you use this package, please cite:
 
